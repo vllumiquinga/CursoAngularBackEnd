@@ -1,0 +1,20 @@
+meta {
+  name: Deleteuser
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{host}}/api/users/delete
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "id": 2,
+      "name": "Sonia Narvaez",
+      "address": "Av. Orion y Neptuno",
+      "phone": "0984583"
+    }
+}

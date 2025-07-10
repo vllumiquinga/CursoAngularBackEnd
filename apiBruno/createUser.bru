@@ -1,0 +1,19 @@
+meta {
+  name: createUser
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/api/users/add
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+   "name":"Sonia Narvaez", 
+   "address":"Av. Orion y Neptuno", 
+   "phone":"0984583"
+  }
+}

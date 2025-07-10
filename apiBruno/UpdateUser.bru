@@ -1,0 +1,20 @@
+meta {
+  name: UpdateUser
+  type: http
+  seq: 6
+}
+
+patch {
+  url: {{host}}/api/users/update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "id": 1,
+      "name": "Juan de la Cruz",
+      "address": "Av. Orion y Neptuno",
+      "phone": "0984583"
+    }
+}

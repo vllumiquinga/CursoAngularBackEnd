@@ -47,8 +47,8 @@ public class UserController {
     }
     
     @DeleteMapping("delete/{userIdDelete}")
-    public void deleteUserById(@PathVariable("userIdDelete") Integer userId) {
-        userService.deleteUserById(userId);
+    public UserDto deleteUserById(@PathVariable("userIdDelete") Integer userId) {    	
+        return userService.deleteUserById(userId);
     }
     
     @PatchMapping("/update")

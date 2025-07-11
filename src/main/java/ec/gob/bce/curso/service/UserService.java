@@ -40,8 +40,12 @@ public class UserService {
         return modelMapper.map(userDb, UserDto.class); 
 	}
 	
-	public void deleteUserById(Integer userId) {
+	public UserDto deleteUserById(Integer userId) {
+		ModelMapper modelMapper = new ModelMapper();
+		User userDb =userRepository.findById(userId).orElse(null);
+		UserDto userDto = modelMapper.map(userDb, UserDto.class); 
 		userRepository.deleteById(userId);
+		return userDto;
 	}
 
 }
